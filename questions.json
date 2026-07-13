@@ -28,7 +28,7 @@
     },
     {
       "text": "Is AI creating content based on human work?",
-      "note": "Do not count training data.",
+      "note": "Do not count training data. Being based on human work means that the generated code utilizes existing material made by humans.",
       "options": [
         {"text": "There is no AI-generated content in the final product.", "points": 3, "maxRating": 5},
         {"text": "All AI-generated content uses and/or is based on human-made content.", "points": 2, "maxRating": 4},
