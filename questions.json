@@ -29,8 +29,8 @@
       ]
     },
     {
-      "text": "Is AI creating content based on human work?",
-      "note": "Do not count training data. Being based on human work means that the generated content utilizes existing material made by humans, such as human-made libraries.",
+      "text": "Is AI creating content based on other work you own?",
+      "note": "Such an AI-generated plugin using a UI library you made, or AI using your existing content to write it's own.",
       "options": [
         {"text": "There is no AI-generated content in the final product.", "points": 3, "maxRating": 5},
         {"text": "All AI-generated content uses and/or is based on human-made content.", "points": 2, "maxRating": 4},
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "text": "Was AI ever used in prototype versions of the final product?",
+      "text": "Was AI ever used in prototype versions of the final product, or used in development that is not relevant to the user?",
       "options": [
         {"text": "Yes", "points": 0, "maxRating": 5},
         {"text": "No", "points": 0, "maxRating": 5}
