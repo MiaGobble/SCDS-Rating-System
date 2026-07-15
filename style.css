@@ -267,14 +267,22 @@ color:var(--ink);
 		line-height:1.5;
 	margin-bottom:8px;
 }
+.rating-carousel {
+	position:relative;
+	padding:0 52px;
+}
+.rating-viewport {
+	overflow:hidden;
+}
 .rating-grid {
-	display:grid;
-	grid-template-columns:repeat(4,1fr);
-	
-		gap:11px;
+	display:flex;
+	gap:11px;
+	transition:transform .45s ease;
+	will-change:transform;
 }
 .rating-card {
 	background:var(--paper);
+	flex:0 0 calc((100% - 22px) / 3);
 	min-height:285px;
 	padding:18px 13px;
 	display:grid;
@@ -292,6 +300,35 @@ color:var(--ink);
 .rating-card:hover {
 	border-color:var(--orange);
 	transform:translateY(-5px);
+}
+.carousel-button {
+	position:absolute;
+	top:50%;
+	z-index:1;
+	width:42px;
+	height:42px;
+	border:1px solid var(--ink);
+	border-radius:50%;
+	background:var(--paper);
+	font:700 22px 'Source Sans 3',sans-serif;
+	line-height:1;
+	cursor:pointer;
+	transform:translateY(-50%);
+	transition:background-color .2s,color .2s;
+}
+.carousel-button:hover {
+	background:var(--ink);
+	color:var(--paper);
+}
+.carousel-button:disabled {
+	opacity:.3;
+	cursor:not-allowed;
+}
+.carousel-previous {
+	left:0;
+}
+.carousel-next {
+	right:0;
 }
 .rating-card img {
 	
@@ -604,8 +641,11 @@ display:block;
 .ratings-heading p {
 margin-top:25px;
 }
-.rating-grid {
-grid-template-columns:repeat(2,1fr);
+.rating-card {
+	flex-basis:calc((100% - 11px) / 2);
+}
+.rating-carousel {
+	padding:0 44px;
 }
 .rating-card {
 min-height:255px;
@@ -657,6 +697,12 @@ padding:10px 12px;
 		padding-left:20px;
 	
 		padding-right:20px;
+}
+.rating-carousel {
+	padding:0 38px;
+}
+.rating-card {
+	flex-basis:100%;
 }
 }
 

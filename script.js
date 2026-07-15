@@ -70,6 +70,42 @@ next.addEventListener('click', () => {
 });
 back.addEventListener('click', () => { if (current > 0) { current--; drawQuestion(); } });
 
+function setupRatingCarousel() {
+  const carousel = document.querySelector('.rating-carousel');
+  if (!carousel) return;
+
+  const viewport = carousel.querySelector('.rating-viewport');
+  const track = carousel.querySelector('.rating-grid');
+  const cards = [...track.children];
+  const previous = carousel.querySelector('.carousel-previous');
+  const nextRating = carousel.querySelector('.carousel-next');
+  let currentRating = 0;
+
+  function updateCarousel() {
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const visibleCards = Math.max(1, Math.floor((viewport.clientWidth + gap) / (cardWidth + gap)));
+    const maxRating = Math.max(0, cards.length - visibleCards);
+    currentRating = Math.min(currentRating, maxRating);
+    track.style.transform = `translateX(-${currentRating * (cardWidth + gap)}px)`;
+    previous.disabled = currentRating === 0;
+    nextRating.disabled = currentRating === maxRating;
+  }
+
+  previous.addEventListener('click', () => {
+    currentRating -= 1;
+    updateCarousel();
+  });
+  nextRating.addEventListener('click', () => {
+    currentRating += 1;
+    updateCarousel();
+  });
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
+}
+
+setupRatingCarousel();
+
 async function loadQuestions() {
   try {
     const response = await fetch('questions.json');
