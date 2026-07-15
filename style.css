@@ -92,7 +92,7 @@ color:var(--orange);
 	background:var(--ink);
 	color:var(--paper);
 	padding:12px 17px;
-	border-radius:30px;
+	border-radius:0;
 	transition:background-color .2s,color .2s;
 }
 .nav-cta:hover {
@@ -165,7 +165,7 @@ h3 {
 }
 .button {
 	border:0;
-	border-radius:30px;
+	border-radius:0;
 	padding:16px 22px;
 	
 		font:700 14px 'Josefin Sans',sans-serif;
@@ -308,7 +308,7 @@ color:var(--ink);
 	width:42px;
 	height:42px;
 	border:1px solid var(--ink);
-	border-radius:50%;
+	border-radius:0;
 	background:var(--paper);
 	font:700 22px 'Source Sans 3',sans-serif;
 	line-height:1;
@@ -473,9 +473,11 @@ border-color:var(--lime);
 .button-bright {
 	background:var(--lime);
 	color:var(--ink);
+	transition:background-color .2s,color .2s;
 }
 .button-bright:hover {
-background:#FCA311;
+background:var(--orange);
+color:var(--paper);
 }
 .result {
 	
@@ -602,7 +604,7 @@ color:var(--lime);
 		color:var(--ink);
 	padding:12px 17px;
 	
-		border-radius:30px;
+	border-radius:0;
 	
 		font:700 14px 'Josefin Sans',sans-serif;
 	
