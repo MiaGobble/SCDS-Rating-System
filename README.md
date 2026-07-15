@@ -26,4 +26,4 @@ You can get the up-to-date image content inside of `static/img`, such as rating 
 ## Self-Rating
 Of course, this tool needs to be self-rated! AI has been used to build the website, based on the system, design, and more from me. I'm not savvy with web development, so I had to leave the CSS work to AI.
 
-![](./static/img/fie.png)
+<img src="./static/img/fie.png" alt="Alt Text" width="88" height="84">
