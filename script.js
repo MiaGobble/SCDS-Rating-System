@@ -20,7 +20,7 @@ const ratingDescription = {
 const ratingImages = {
   'AAA': 'aaa.png', 'OIB': 'oib.png', 'OIE': 'oie.png', 'OPB': 'opb.png',
   'OPE': 'ope.png', 'OEB': 'oeb.png', 'OEE': 'oee.png', 'FIB': 'fib.png',
-  'FIE': 'fib.png', 'FPB': 'fpb.png', 'FPE': 'fpe.png', 'FEB': 'feb.png',
+  'FIE': 'fie.png', 'FPB': 'fpb.png', 'FPE': 'fpe.png', 'FEB': 'feb.png',
   'FEE': 'fee.png'
 };
 const quiz = document.querySelector('#quiz');
