@@ -142,6 +142,9 @@ h3 { font:700 1em 'Josefin Sans',sans-serif; }
 	
 		justify-content:center;
 }
+.button[hidden] {
+	display:none;
+}
 .button-dark {
 	background:var(--ink);
 	color:var(--paper);
