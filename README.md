@@ -22,3 +22,8 @@ The questionnaire directly defines the rating. It no longer calculates a score b
 
 ## Resources
 You can get the up-to-date image content inside of `static/img`, such as rating icons.
+
+## Self-Rating
+Of course, this tool needs to be self-rated! AI has been used to build the website, based on the system, design, and more from me. I'm not savvy with web development, so I had to leave the CSS work to AI.
+
+![](./static/img/fie.png)
