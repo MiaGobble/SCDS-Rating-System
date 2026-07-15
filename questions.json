@@ -19,7 +19,7 @@
     },
     {
       "text": "If you used generative AI in your final product, how would you describe its role?",
-      "note": "This is a starting point for the scoring,",
+      "note": "This is a starting point for the scoring.",
       "options": [
         {"text": "There is no generative AI.", "points": 4, "maxRating": 5},
         {"text": "Generative AI is in the final product but is used for repetitive tasks behind the scenes.", "points": 4, "maxRating": 4},
