@@ -27,6 +27,7 @@ const quiz = document.querySelector('#quiz');
 const next = document.querySelector('#next');
 const back = document.querySelector('#back');
 const result = document.querySelector('#result');
+const downloadRating = document.querySelector('#download-rating');
 
 function drawQuestion() {
   const q = questions[current];
@@ -42,6 +43,9 @@ function showResult(rating) {
   result.hidden = false;
   quiz.hidden = true;
   back.hidden = true;
+  downloadRating.href = `static/img/${ratingImages[rating]}`;
+  downloadRating.download = `${rating.toLowerCase()}-rating.png`;
+  downloadRating.hidden = false;
   next.hidden = false;
   next.dataset.retake = 'true';
   next.textContent = 'Retake the questionnaire';
@@ -53,6 +57,9 @@ function resetQuiz() {
   result.hidden = true;
   quiz.hidden = false;
   back.hidden = false;
+  downloadRating.hidden = true;
+  downloadRating.removeAttribute('href');
+  downloadRating.removeAttribute('download');
   next.hidden = false;
   next.dataset.retake = 'false';
   drawQuestion();
